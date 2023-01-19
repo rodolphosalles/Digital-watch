@@ -1,5 +1,9 @@
 const clockContainer = document.querySelector('.clock-container')
 
+const formatTimeUnit = (unit) => {
+  return String(unit).length === 1 ? `0${unit}` : unit;
+}
+
 const updateClock = () => {
   const present = new Date()
   const hours = present.getHours()
